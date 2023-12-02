@@ -26,6 +26,6 @@ defmodule Advent.MixProject do
   end
 
   defp deps do
-    []
+    [{:benchee, "~> 1.2"}]
   end
 end
