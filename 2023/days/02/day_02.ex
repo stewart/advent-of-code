@@ -41,7 +41,7 @@ defmodule Day02 do
   end
 
   def part2 do
-    minimum_cubes_required = fn {id, rounds} ->
+    minimum_cubes_required = fn {_game, rounds} ->
       Enum.reduce(rounds, %{}, fn round, acc ->
         Enum.reduce(round, acc, fn {color, count}, totals ->
           Map.update(totals, color, count, &max(&1, count))
